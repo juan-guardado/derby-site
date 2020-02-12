@@ -201,7 +201,7 @@ Derby creates a Model Reference (`model.ref()`) for attribute expressions where 
 
 ## `as` attribute
 
-The `as` attribute may be applied to both components and DOM elements. Before a component's `create` method is called, Derby will set these items as properties of the current controller. This provides easy access to these items within the controller code of a component.
+The `as` attribute may be applied to both components and DOM elements. Before a component's `create` method is called, Derby will set these items as properties of the current controller. This provides easy access to these items within the controller code of a component. In the below example the use of `is` indicates that the nested view will be an instance of the `modal`. By adding `as` we have created direct access to the methods available on the modal's model, but within the parent components model . For instance lets assume there is a method `close` on the modal's model. However, based on implemenation we wish to invoke this method within the parent, an example of that is shown below. The `this.modal.close()` is invoked in the parent model.
 
 ```derby
 <index:>
